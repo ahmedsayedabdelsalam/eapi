@@ -87,7 +87,7 @@ class ProductController extends Controller
      * @param  \App\Model\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
         $this->ProductUserCheck($product);
         $request['detail'] = $request->description;
